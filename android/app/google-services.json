@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "294432611545",
+    "project_id": "atqn-e8ab8",
+    "storage_bucket": "atqn-e8ab8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294432611545:android:137fcda3850f6731d2f2c8",
+        "android_client_info": {
+          "package_name": "com.example.student_project1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9tc1WEte4AHLbid_4ImyTm1Hns03A8KQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294432611545:android:61ebbb664bed8ab9d2f2c8",
+        "android_client_info": {
+          "package_name": "com.othman.admenatqan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9tc1WEte4AHLbid_4ImyTm1Hns03A8KQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294432611545:android:8aa758440cdb80c8d2f2c8",
+        "android_client_info": {
+          "package_name": "com.othman.atqan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9tc1WEte4AHLbid_4ImyTm1Hns03A8KQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
