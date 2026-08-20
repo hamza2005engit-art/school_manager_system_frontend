@@ -43,7 +43,7 @@ import '../features/student_management/presentation/bindings/student_mangment_bi
 
 class AppPages {
   // تحديد الصفحة الابتدائية للتطبيق
-  static const String INITIAL = Routes.NOTIFICATION;
+  static const String INITIAL = Routes.SEPLASH;
 
   static final List<GetPage> routes = [
 

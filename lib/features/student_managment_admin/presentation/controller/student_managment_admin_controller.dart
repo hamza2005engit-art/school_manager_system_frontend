@@ -29,7 +29,6 @@ class StudentManagmentAdminController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    getStudents(1, 1);
   }
 
   Future<void> getStudents(int section, int grade) async {

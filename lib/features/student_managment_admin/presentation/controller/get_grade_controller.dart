@@ -32,7 +32,7 @@ class GetGradeController extends GetxController {
       selectedGrade.value = null; // تم إصلاحها هنا لمنع تعليق البيانات القديمة
 
       final response = await http.get(
-        Uri.parse('http://10.0.2.2:8000/api/v1/get_study_stage'),
+        Uri.parse('https://darkseagreen-salamander-685564.hostingersite.com/api/v1/get_study_stage'),
       );
 
       if (response.statusCode == 200) {

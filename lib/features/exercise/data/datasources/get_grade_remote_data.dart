@@ -10,7 +10,7 @@ class GradeRemoteDataSource {
   Future<List<GradeModel>> get_grade() async{
 
     final response = await http.get(
-        Uri.parse("http://10.0.2.2:8000/api/v1/get_study_stage"),
+        Uri.parse("https://darkseagreen-salamander-685564.hostingersite.com/api/v1/get_study_stage"),
       headers: {
         'Accept': 'application/json',
         'Authorization': 'Bearer ${token}',

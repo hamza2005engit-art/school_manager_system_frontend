@@ -13,15 +13,17 @@ class StudyStageModel {
     List<int> parsedSections = [];
 
     final rawSection = json['section_number'];
+
     if (rawSection is Map) {
-      // إذا كانت البيانات القادمة عبارة عن Object / Map
-      parsedSections = rawSection.values
-          .map((e) => int.tryParse(e.toString()) ?? 0)
+      // مفاتيح الـ Map هي أرقام الشعب
+      parsedSections = rawSection.keys
+          .map((e) => int.tryParse(e.toString()))
+          .whereType<int>()
           .toList();
     } else if (rawSection is List) {
-      // إذا كانت البيانات القادمة عبارة عن Array / List
       parsedSections = rawSection
-          .map((e) => int.tryParse(e.toString()) ?? 0)
+          .map((e) => int.tryParse(e.toString()))
+          .whereType<int>()
           .toList();
     }
 

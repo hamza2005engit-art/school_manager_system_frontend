@@ -1,6 +1,6 @@
 class AppConstants {
   // 1. إعدادات الـ API (الربط مع Laravel)
-  static const String baseUrl = "http://10.0.2.2:8000/api/v1"; // استخدم هذا العنوان لمحاكي أندرويد
+  static const String baseUrl = "https://darkseagreen-salamander-685564.hostingersite.com/api/v1"; // استخدم هذا العنوان لمحاكي أندرويد
   static const int requestTimeout = 30000; // 30 ثانية
 
   // 2. مفاتيح التخزين المحلي (Local Storage)

@@ -6,6 +6,7 @@ import 'package:student_project1/features/exercise/presentaion/controllers/get_g
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_text_style.dart';
 import '../../../../core/utils/devices_type.dart';
+import '../../../../routes/app_routes.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/image_exercise.dart';
 import '../widgets/textformfiled.dart';
@@ -237,6 +238,9 @@ class _ExerciseState extends State<Exercise> {
                                       child: CustomButton(
                                         text: 'Create with Notification'.tr,
                                         colorButton: Color(0xFFDDAE09),
+                                        onTap: () {
+                                          Get.toNamed(Routes.NOTIFICATION);
+                                        },
                                       ),
                                     ),
 

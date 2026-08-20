@@ -11,7 +11,7 @@ class StatisticsRemoteDataSource {
   
   Future<StatisticsModel> getContStudents() async{
     final response = await http.get(
-      Uri.parse('http://10.0.2.2:8000/api/v1/admin/count/student',),
+      Uri.parse('https://darkseagreen-salamander-685564.hostingersite.com/api/v1/admin/count/student',),
       headers: {
         'Accept': 'application/json',
         'Authorization': 'Bearer ${token}',
@@ -29,7 +29,7 @@ class StatisticsRemoteDataSource {
 
   Future<StatisticsModel> getCountTeachcers() async{
     final response = await http.get(
-      Uri.parse('http://10.0.2.2:8000/api/v1/admin/count/teacher',),
+      Uri.parse('https://darkseagreen-salamander-685564.hostingersite.com/api/v1/admin/count/teacher',),
       headers: {
         'Accept': 'application/json',
         'Authorization': 'Bearer ${token}',

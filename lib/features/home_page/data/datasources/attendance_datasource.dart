@@ -6,27 +6,45 @@ import 'package:http/http.dart' as http;
 import '../model/attendance_model.dart';
 
 class AttendanceRemoteDataSource {
-
   final token = GetStorage().read('token');
 
   Future<AttendanceModel> getAttendance() async {
-
-    final response = await http.get(
-      Uri.parse(
-       'http://10.0.2.2:8000/api/v1/student/attendance/rate'
-      ),
-      headers: {
-        'Accept': 'application/json',
-        'Authorization': 'Bearer ${token}',
-      },
+    final url = Uri.parse(
+      'https://darkseagreen-salamander-685564.hostingersite.com/api/v1/student/attendance/rate',
     );
 
-    if(response.statusCode == 200) {
+    print('================ ATTENDANCE RATE ================');
+    print('URL: $url');
+    print('TOKEN EXISTS: ${token != null && token.toString().isNotEmpty}');
 
-      final data = jsonDecode(response.body);
-      return AttendanceModel.fromJson(data);
-    }   else {
-      throw Exception("Faild Load Attendance Rate ${response.statusCode}_${response.body}");
+    try {
+      final response = await http.get(
+        url,
+        headers: {
+          'Accept': 'application/json',
+          'Authorization': 'Bearer $token',
+        },
+      );
+
+      print('STATUS: ${response.statusCode}');
+      print('BODY: ${response.body}');
+      print('==================================================');
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+
+        print('PARSED DATA: $data');
+
+        return AttendanceModel.fromJson(data);
+      } else {
+        throw Exception(
+          'Failed Load Attendance Rate '
+              '${response.statusCode}_${response.body}',
+        );
+      }
+    } catch (e) {
+      print('❌ ATTENDANCE API ERROR: $e');
+      rethrow;
     }
   }
 }

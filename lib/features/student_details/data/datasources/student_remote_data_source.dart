@@ -8,7 +8,7 @@ class StudentRemoteDataSource {
 
   Future<StudentModel> getStudentDetails() async {
     final response = await http.get(
-        Uri.parse('https://your-api.com/api/student')
+        Uri.parse('https://darkseagreen-salamander-685564.hostingersite.com/api/student')
     );
 
     if(response == 200) {

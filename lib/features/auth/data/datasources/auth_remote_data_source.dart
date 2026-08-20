@@ -25,7 +25,7 @@ abstract class AuthRemoteDataSource {
 
 class AuthRemoteDataSourceImpl extends GetConnect
     implements AuthRemoteDataSource {
-  final String baseUrl = "http://10.0.2.2:8000/api/v1";
+  final String baseUrl = "https://darkseagreen-salamander-685564.hostingersite.com/api/v1";
   @override
   void onInit() {
     httpClient.baseUrl = baseUrl;
@@ -83,6 +83,7 @@ class AuthRemoteDataSourceImpl extends GetConnect
 
   @override
   Future<RegisterUserModel> register(RegisterUser user) async {
+
     var request = http.MultipartRequest('POST', Uri.parse('$baseUrl/register'));
 
     // إضافة الحقول النصية (يجب أن تطابق الـ Request في Laravel)
@@ -108,8 +109,20 @@ class AuthRemoteDataSourceImpl extends GetConnect
 
     request.headers.addAll({'Accept': 'application/json'});
 
+    print("========== REGISTER REQUEST ==========");
+    print("URL    : ${request.url}");
+    print("FIELDS : ${request.fields}");
+    print("FILES  : ${request.files.length}");
+    print("======================================");
+
     var streamedResponse = await request.send();
     var response = await http.Response.fromStream(streamedResponse);
+
+    print("========== REGISTER RESPONSE ==========");
+    print("STATUS : ${response.statusCode}");
+    print("BODY   : ${response.body}");
+    print("HEADERS: ${response.headers}");
+    print("======================================");
 
     if (response.statusCode == 201) {
       return RegisterUserModel.fromJson(json.decode(response.body));

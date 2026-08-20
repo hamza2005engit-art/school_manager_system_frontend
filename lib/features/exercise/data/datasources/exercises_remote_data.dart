@@ -11,7 +11,7 @@ class ExercisesRemoteDataSource {
   /// 📌 Create Exercise
   Future<void> createExercise({required String title, required String content, required String date, required int studyStageId,}) async {
     final response = await http.post(
-      Uri.parse("http://10.0.2.2:8000/api/v1/exercises"),
+      Uri.parse("https://darkseagreen-salamander-685564.hostingersite.com/api/v1/exercises"),
       body:  jsonEncode({
         "title": title,
         "content": content,
@@ -32,7 +32,7 @@ class ExercisesRemoteDataSource {
 
   Future<List<ExercisesModel>> getExercises() async {
 
-    final uri = Uri.parse("http://10.0.2.2:8000/api/v1/teacher/exercises");
+    final uri = Uri.parse("https://darkseagreen-salamander-685564.hostingersite.com/api/v1/teacher/exercises");
 
     final response = await http.get(uri, headers: {
       "Accept": "application/json",
@@ -55,7 +55,7 @@ class ExercisesRemoteDataSource {
   }
   Future<List<ExercisesModel>> getExercisesForStudent() async {
 
-    final uri = Uri.parse("http://10.0.2.2:8000/api/v1/student/exercises");
+    final uri = Uri.parse("https://darkseagreen-salamander-685564.hostingersite.com/api/v1/student/exercises");
 
     final response = await http.get(uri, headers: {
       "Accept": "application/json",
@@ -79,7 +79,7 @@ class ExercisesRemoteDataSource {
 
   Future<void> deleteExercise(int id) async{
      final response = await http.delete(
-       Uri.parse('http://10.0.2.2:8000/api/v1/exercises/$id'),
+       Uri.parse('https://darkseagreen-salamander-685564.hostingersite.com/api/v1/exercises/$id'),
          headers: {
            "Accept": "application/json",
            'Authorization': 'Bearer ${token}'

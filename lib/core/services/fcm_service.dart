@@ -46,7 +46,7 @@ class FcmService extends GetConnect {
       final accessToken = GetStorage().read('token');
       print('FCM: sending token to backend, authToken exists = ${accessToken != null}');
       final response = await post(
-        'http://10.0.2.2:8000/api/v1/updateFcmToken',
+        'https://darkseagreen-salamander-685564.hostingersite.com/api/v1/updateFcmToken',
         {'fcm_token': token},
         headers: {'Authorization': 'Bearer $accessToken'},
       );

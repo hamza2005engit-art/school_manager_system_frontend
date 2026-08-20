@@ -12,7 +12,7 @@ class StudentManagmentAdminRemoteDataSource {
     print('API CALLED: $section - $grade');
 
     try {
-      final url = 'http://10.0.2.2:8000/api/v1/attendance/$section/$grade';
+      final url = 'https://darkseagreen-salamander-685564.hostingersite.com/api/v1/attendance/$section/$grade';
       print('URL: $url');
 
       final response = await http.get(
@@ -48,7 +48,7 @@ class StudentManagmentAdminRemoteDataSource {
     required int sectionId,
     required List<Map<String, dynamic>> students,
   }) async {
-    final url = 'http://10.0.2.2:8000/api/v1/take_attendance/bulk';
+    final url = 'https://darkseagreen-salamander-685564.hostingersite.com/api/v1/take_attendance/bulk';
 
     final response = await http.put(
       Uri.parse(url),

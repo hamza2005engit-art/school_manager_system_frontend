@@ -9,7 +9,7 @@ class LibraryRemoteDataSource {
   
   Future<List<LibraryModel>> getLibrary() async{
     final response = await http.get(
-      Uri.parse("http://10.0.2.2:8000/api/v1/books"),
+      Uri.parse("https://darkseagreen-salamander-685564.hostingersite.com/api/v1/books"),
       headers: {
     'Accept': 'application/json',
     'Authorization': 'Bearer ${token}',

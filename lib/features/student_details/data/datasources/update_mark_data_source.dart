@@ -12,7 +12,7 @@ class UpdateMarkRemoteDataSource {
   Future<bool> updateMark(UpdateMarkModel updateMarkModel) async {
     try {
       final response = await http.post(
-        Uri.parse('http://10.0.2.2:8000/api/v1/teacher/marks/update-by-student'),
+        Uri.parse('https://darkseagreen-salamander-685564.hostingersite.com/api/v1/teacher/marks/update-by-student'),
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',

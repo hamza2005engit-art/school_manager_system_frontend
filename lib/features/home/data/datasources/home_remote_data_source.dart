@@ -58,7 +58,7 @@ abstract class HomeRemoteDataSource {
       String content,
       String title,
         ) async {
-      final response = await post('http://your-laravel-api.com/api/Notifincation', {
+      final response = await post('https://darkseagreen-salamander-685564.hostingersite.com/api/Notifincation', {
         'date': date,
         'content': content,
         'title': title,
@@ -81,7 +81,7 @@ abstract class HomeRemoteDataSource {
     final accessToken = GetStorage().read('token');
 
     final response = await post(
-      'http://10.0.2.2:8000/api/v1/addNotifincation',
+      'https://darkseagreen-salamander-685564.hostingersite.com/api/v1/addNotifincation',
       {
         'grade': grade,
         'content': content,
@@ -113,7 +113,7 @@ abstract class HomeRemoteDataSource {
       int finale,
       int total,
       ) async {
-    final response = await post('http://your-laravel-api.com/api/mymarks', {
+    final response = await post('https://darkseagreen-salamander-685564.hostingersite.com/api/mymarks', {
       'exersices': exersices,
       'finale': finale,
       'subject': subject,
@@ -141,7 +141,7 @@ abstract class HomeRemoteDataSource {
       String title,
       String grade,
       ) async {
-    final response = await post('http://your-laravel-api.com/api/Exercises', {
+    final response = await post('https://darkseagreen-salamander-685564.hostingersite.com/api/Exercises', {
       'date': date,
       'content': content,
       'title': title,
@@ -165,7 +165,7 @@ abstract class HomeRemoteDataSource {
       int paid,
       int toata_remaining,
       ) async {
-    final response = await post('http://your-laravel-api.com/api/fees', {
+    final response = await post('https://darkseagreen-salamander-685564.hostingersite.com/api/fees', {
       'toata_fees': toata_fees,
       'total': total,
       'paid': paid,
@@ -183,7 +183,7 @@ abstract class HomeRemoteDataSource {
   Future<List<NotifincationModel>> getNotifications() async {
     final accessToken = GetStorage().read('token');
     final response = await get(
-      'http://10.0.2.2:8000/api/v1/Notifincation',
+      'https://darkseagreen-salamander-685564.hostingersite.com/api/v1/Notifincation',
       headers: {'Authorization': 'Bearer $accessToken'},
     );
 

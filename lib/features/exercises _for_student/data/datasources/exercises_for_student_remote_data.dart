@@ -7,7 +7,7 @@ class ExercisesForStudentRemoteDataSource {
 
   Future<ExercisesForStudentModel> getExercisesForStudent() async {
     final response = await http.get(Uri.parse(
-  'https://your-api.com/api/exercises'
+  'https://darkseagreen-salamander-685564.hostingersite.com/api/exercises'
   )
   );
 
